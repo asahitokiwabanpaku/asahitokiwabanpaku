@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>越前町ガイド | Echizen Town Guide</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+        background: linear-gradient(135deg,
+            #ff9a9e 0%, #fad0c4 15%, #fbc2eb 30%, #a6c1ee 50%, #84fab0 70%, #8fd3f4 100%);
+        background-attachment: fixed;
+        color: #333;
+    }
+    header {
+        background: rgba(26, 74, 122, 0.75);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 0 0 20px 20px;
+    }
+    nav {
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: blur(6px);
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        text-decoration: none;
+        color: #1a4a7a;
+        font-weight: bold;
+    }
+    section {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 20px;
+        background: rgba(255,255,255,0.75);
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+        gap: 25px;
+        margin-top: 25px;
+    }
+    .card {
+        background: rgba(255,255,255,0.85);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 { color: #1a4a7a; margin-top: 0; }
+    .card a.btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        background: #1a4a7a;
+    }
+    .btn-crab {
+        background: #d32f2f;
+    }
+    .btn-crab:hover { background: #9a1f1f; }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(26, 74, 122, 0.75);
+        color: white;
+        border-radius: 20px 20px 0 0;
+    }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>越前町ガイド</h1>
+    <p>越前町(福井県丹生郡)の魅力を紹介します。</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">概要</a></li>
+        <li><a href="#spots">観光スポット</a></li>
+        <li><a href="#food">名物・グルメ</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#social">公式SNS</a></li>
+    </ul>
+</nav>
+
+<section id="about" class="fade-in">
+    <h2>越前町について</h2>
+    <p>越前町は福井県丹生郡にある町で、日本海に面し海の文化・食が魅力の地域です。 [oai_citation:0‡ウィキペディア](https://en.wikipedia.org/wiki/Echizen%2C_Fukui_%28town%29?utm_source=chatgpt.com)</p>
+</section>
+
+<section id="spots" class="fade-in">
+    <h2>観光スポット</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>越前海岸</h3>
+            <p>日本海の絶景スポットです。 [oai_citation:1‡マップかわいい](https://mapkawaii.com/kawaiimap/echizen-coast/?utm_source=chatgpt.com)</p>
+            <a href="https://www.town-echizen.jp/about/feature.php?id=6" target="_blank" class="btn">🌊 越前海岸を見る</a>
+        </div>
+
+        <div class="card">
+            <h3>越前陶芸村</h3>
+            <p>越前焼の文化と体験が楽しめる場所です。 [oai_citation:2‡マップかわいい](https://mapkawaii.com/kawaiimap/echizen-togei-mura/?utm_source=chatgpt.com)</p>
+            <a href="https://www.echizenkk.jp/togeibunka" target="_blank" class="btn">🎨 越前陶芸館を見る</a>
+        </div>
+
+        <div class="card">
+            <h3>越前がにミュージアム</h3>
+            <p>越前がにの魅力を学べる施設です。</p>
+            <a href="https://www.echizenkk.jp/kanimuseum" target="_blank" class="btn">🦀 越前がにミュージアムを見る</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="food" class="fade-in">
+    <h2>名物・グルメ</h2>
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>越前がに</h3>
+            <p>福井の冬の味覚の王様。</p>
+            <a href="https://www.town-echizen.jp/echizengani/" target="_blank" class="btn btn-crab">🦀 かにを見る</a>
+        </div>
+
+        <div class="card">
+            <h3>越前おろしそば</h3>
+            <p>辛味大根の風味が特長のそばです。</p>
+            <a href="http://www.town-echizen.jp/locotabi-blog/detail.php?id=38" target="_blank" class="btn">🍜 越前おろしそばのお店を見る</a>
+        </div>
+
+        <div class="card">
+            <h3>海鮮料理</h3>
+            <p>日本海の新鮮な魚介を使った料理が人気です。</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="access" class="fade-in">
+    <h2>越前町までのアクセス</h2>
+    <p>
+        ・最寄駅: JR福井駅からバスで約50分<br>
+        ・車: 北陸自動車道「鯖江IC」「武生IC」から約40分
+    </p>
+
+    <!-- 📍 越前町全体の Google マップ -->
+    <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.375236542345!2d136.12900000000003!3d35.97550000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60014b5c07826bc7%3A0x7a61717e11540c5f!2sEchizen%20Town%2C%20Fukui%2C%20Japan!5e0!3m2!1sja!2sjp!4v1709999999999"
+            width="100%" height="100%" style="border:0;position:absolute;top:0;left:0;"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+
+<section id="social" class="fade-in">
+    <h2>公式SNS</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h3>YouTube</h3>
+            <a href="https://www.youtube.com/@朝日常磐/shorts" target="_blank" class="btn youtube">📺 YouTubeを見る</a>
+        </div>
+        <div class="card">
+            <h3>TikTok</h3>
+            <a href="https://www.tiktok.com/@pr43567?_t=ZS-91WsS6YIRW1" target="_blank" class="btn tiktok">🎵 TikTokを見る</a>
+        </div>
+    </div>
+</section>
+
+<footer>© 2025 朝日小学校5年生 宣伝・PRチーム</footer>
+
+<script>
+    const items = document.querySelectorAll('.fade-in');
+    const onScroll = () => {
+        items.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+                el.classList.add('visible');
+            }
+        });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+</script>
+
+</body>
+</html>
