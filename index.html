@@ -3,113 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="Gv4a0UyYVOFe7nFkengt4vWVZDPuPvu03t_TdguTVPg" />
-<title>越前町ガイド | Echizen Town Guide</title>
-<link rel="icon" href="./img/ECHIZEN-TOWN.png">
- 
-<style>
+  <meta name="google-site-verification" content="Gv4a0UyYVOFe7nFkengt4vWVZDPuPvu03t_TdguTVPg" />
+  <title>越前町ガイド | Echizen Town Guide</title>
+  <link rel="icon" href="./img/ECHIZEN-TOWN.png">
+
+  <style>
     body {
-        margin: 0;
-        font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
-        background: linear-gradient(135deg,
-            #ff9a9e 0%, #fad0c4 15%, #fbc2eb 30%, #a6c1ee 50%, #84fab0 70%, #8fd3f4 100%);
-        background-attachment: fixed;
-        color: #333;
+      margin: 0;
+      font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: linear-gradient(135deg,
+        #ff9a9e 0%, #fad0c4 15%, #fbc2eb 30%, #a6c1ee 50%, #84fab0 70%, #8fd3f4 100%);
+      background-attachment: fixed;
+      color: #333;
     }
     header {
-        background: rgba(26, 74, 122, 0.75);
-        color: white;
-        padding: 40px 20px;
-        text-align: center;
-        border-radius: 0 0 20px 20px;
+      background: rgba(26, 74, 122, 0.75);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
     }
     nav {
-        background: rgba(255,255,255,0.85);
-        backdrop-filter: blur(6px);
-        padding: 10px 0;
-        position: sticky;
-        top: 0;
-        z-index: 10;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin: 0;
-        padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
     }
     nav a {
-        text-decoration: none;
-        color: #1a4a7a;
-        font-weight: bold;
+      text-decoration: none;
+      color: #1a4a7a;
+      font-weight: bold;
     }
     section {
-        max-width: 1000px;
-        margin: 60px auto;
-        padding: 20px;
-        background: rgba(255,255,255,0.75);
-        border-radius: 15px;
-        backdrop-filter: blur(5px);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
     }
     .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-        gap: 25px;
-        margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 25px;
     }
     .card {
-        background: rgba(255,255,255,0.85);
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
     .card h3 { color: #1a4a7a; margin-top: 0; }
     .card a.btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 8px 15px;
-        border-radius: 5px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        background: #1a4a7a;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: #1a4a7a;
     }
-    .btn-crab {
-        background: #d32f2f;
-    }
-    .btn-crab:hover { background: #9a1f1f; }
+    .btn-crab { background: #d32f2f; }
     footer {
-        text-align: center;
-        padding: 20px;
-        background: rgba(26, 74, 122, 0.75);
-        color: white;
-        border-radius: 20px 20px 0 0;
+      text-align: center;
+      padding: 20px;
+      background: rgba(26, 74, 122, 0.75);
+      color: white;
+      border-radius: 20px 20px 0 0;
     }
     .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
-</style>
-</head>
 
+    /* ===== 高級おみくじ ===== */
+    .omikuji-box {
+      margin: 80px auto 60px;
+      padding: 50px 20px;
+      max-width: 900px;
+      text-align: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .omikuji-box h2 {
+      font-size: 30px;
+      letter-spacing: 3px;
+    }
+    .omikuji-card {
+      max-width: 420px;
+      margin: 30px auto 0;
+      padding: 30px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.12);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
+    }
+    .omikuji-result {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .omikuji-spot {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .omikuji-comment {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    .omikuji-btn {
+      margin-top: 25px;
+      padding: 14px 32px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #d4af37, #f7e27d);
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
 <body>
 
 <header>
-    <h1>越前町ガイド</h1>
-    <p>越前町(福井県丹生郡)の魅力を紹介します。</p>
+  <h1>越前町ガイド</h1>
+  <p>越前町(福井県丹生郡)の魅力を紹介します。</p>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#about">概要</a></li>
-        <li><a href="#spots">観光スポット</a></li>
-        <li><a href="#food">名物・グルメ</a></li>
-        <li><a href="#access">アクセス</a></li>
-        <li><a href="#social">公式SNS</a></li>
-    </ul>
+  <ul>
+    <li><a href="#about">概要</a></li>
+    <li><a href="#spots">観光スポット</a></li>
+    <li><a href="#food">名物・グルメ</a></li>
+    <li><a href="#access">アクセス</a></li>
+    <li><a href="#social">公式SNS</a></li>
+  </ul>
 </nav>
 
+<section id="about" class="fade-in">
+  <h2>越前町について</h2>
+  <p>越前町は福井県丹生郡にある町で、日本海に面し海の文化・食が魅力の地域です。</p>
+</section>
+
+<!-- 途中の既存セクションはそのまま -->
 <section id="about" class="fade-in">
     <h2>越前町について</h2>
     <p>越前町は福井県丹生郡にある町で、日本海に面し海の文化・食が魅力の地域です.</p>
@@ -181,6 +229,17 @@
     </div>
 
 </section>
+<!-- ===== おみくじセクション ===== -->
+<div class="omikuji-box fade-in">
+  <h2>🎋 越前町おみくじ</h2>
+  <p>今日の運とおすすめ観光スポット</p>
+
+  <div class="omikuji-card" id="omikujiResult">
+    まだ引いていません
+  </div>
+
+  <button class="omikuji-btn" onclick="drawOmikuji()">おみくじを引く</button>
+</div>
 
 <section id="social" class="fade-in">
     <h2>公式SNS</h2>
@@ -199,16 +258,35 @@
 <footer>© 2025 朝日小学校5年生 宣伝・PRチーム</footer>
 
 <script>
-const items = document.querySelectorAll(".fade-in");
+const items = document.querySelectorAll('.fade-in');
 const onScroll = () => {
   items.forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 80) {
-      el.classList.add("visible");
+      el.classList.add('visible');
     }
   });
 };
-document.addEventListener("scroll", onScroll);
+document.addEventListener('scroll', onScroll);
 onScroll();
+
+const omikuji = [
+  { luck: '🌟 大吉', spot: '越前がにミュージアム', comment: '最高の一日。新しいことに挑戦しよう。' },
+  { luck: '😊 中吉', spot: '越前海岸', comment: '景色を楽しむと運気アップ。' },
+  { luck: '🙂 小吉', spot: '道の駅 越前', comment: 'おいしい出会いがありそう。' },
+  { luck: '😌 吉', spot: '越前陶芸村', comment: '文化にふれると良い日。' },
+  { luck: '😅 末吉', spot: '町なか散歩', comment: '小さな発見を大切に。' },
+  { luck: '😲 凶', spot: 'おうちで下調べ', comment: '今日は準備の日。' }
+];
+
+function drawOmikuji() {
+  const r = Math.floor(Math.random() * omikuji.length);
+  const o = omikuji[r];
+  document.getElementById('omikujiResult').innerHTML = `
+    <div class="omikuji-result">${o.luck}</div>
+    <div class="omikuji-spot">📍 ${o.spot}</div>
+    <div class="omikuji-comment">${o.comment}</div>
+  `;
+}
 </script>
 
 </body>
