@@ -278,14 +278,24 @@ const omikuji = [
   { luck: '😲 凶', spot: 'おうちで下調べ', comment: '今日は準備の日。' }
 ];
 
+let omikujiDrawn = false;
+
 function drawOmikuji() {
+  if (omikujiDrawn) {
+    alert('おみくじは1回までだよ!');
+    return;
+  }
+
   const r = Math.floor(Math.random() * omikuji.length);
   const o = omikuji[r];
+
   document.getElementById('omikujiResult').innerHTML = `
     <div class="omikuji-result">${o.luck}</div>
     <div class="omikuji-spot">📍 ${o.spot}</div>
     <div class="omikuji-comment">${o.comment}</div>
   `;
+
+  omikujiDrawn = true;
 }
 </script>
 
